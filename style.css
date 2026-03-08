@@ -1,0 +1,467 @@
+/**
+ * Estilos globais - Vagas em Sumaré
+ */
+
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f3f4f6;
+    color: #111827;
+}
+
+/* Header */
+header {
+    background: #154899;
+    color: #fff;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header h1.header-titulo-com-bandeira .header-bandeira {
+    height: 44px;
+    width: auto;
+    display: block;
+    border-radius: 2px;
+}
+
+header a {
+    color: #0a66c2;
+    background: #fff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+header .user-info {
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+/* Main */
+main {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 0 16px 32px;
+}
+
+main.main-narrow {
+    max-width: 480px;
+}
+
+/* Página de login: brasão flutuando acima da caixa */
+main.main-login {
+    padding-top: 8px;
+}
+
+.login-brasao {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-brasao-img {
+    height: 124px;
+    width: auto;
+    display: inline-block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.main-login .card form .btn,
+.main-login .card form button.btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.main-login .card .link,
+.main-cadastro .card .link {
+    text-align: center;
+}
+
+.main-cadastro .card form .btn,
+.main-cadastro .card form button.btn {
+    width: 100%;
+    justify-content: center;
+}
+
+
+main.main-medium {
+    max-width: 800px;
+}
+
+/* Cards */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.08);
+}
+
+.card h2 {
+    margin: 0 0 12px;
+    font-size: 18px;
+}
+
+.card h2.top-title {
+    margin: 0;
+}
+
+/* Meta e listas */
+.meta {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.meta-extra span + span::before {
+    content: ' · ';
+}
+
+.detail-row {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.benefits-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    font-size: 12px;
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.benefits-list {
+    margin: 4px 0 0 0;
+    padding-left: 20px;
+}
+
+.description {
+    font-size: 14px;
+    color: #374151;
+    white-space: pre-wrap;
+}
+
+/* Botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #0a66c2;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.btn-danger {
+    background: #dc2626;
+    color: #fff;
+}
+
+/* Ações e lista de vagas */
+.actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.empty {
+    text-align: center;
+    color: #6b7280;
+    padding: 32px 16px;
+}
+
+/* Formulários */
+.field {
+    margin-bottom: 12px;
+}
+
+.field label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: #4b5563;
+}
+
+.field input,
+.field textarea,
+.field select {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+}
+
+.field textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.field-row .field {
+    margin-bottom: 0;
+}
+
+.field-row + .field,
+.bloco-endereco .field:last-child {
+    margin-bottom: 0;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+}
+
+.radio-label,
+.checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    gap: 4px;
+}
+
+.radio-label input,
+.checkbox-label input {
+    width: auto;
+    min-width: 1.25rem;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.field .sublabel {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.bloco-endereco {
+    margin-top: 4px;
+}
+
+.bloco-endereco .field {
+    margin-bottom: 12px;
+}
+
+.bloco-endereco .field-row + .field {
+    margin-top: 0;
+}
+
+/* Mensagens */
+.errors {
+    background: #fef2f2;
+    color: #b91c1c;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.message-success {
+    background: #ecfdf3;
+    color: #15803d;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.hint {
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #4b5563;
+}
+
+.link {
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.link a {
+    color: #0a66c2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Tabela de vagas */
+.jobs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.jobs-table th,
+.jobs-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.jobs-table th {
+    text-align: left;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.top-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 16px;
+    }
+
+    header h1 {
+        font-size: 18px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    header h1.header-titulo-com-bandeira .header-bandeira {
+        height: 36px;
+    }
+
+    main {
+        margin: 16px auto;
+        padding: 0 12px 24px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .field-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .field-row .field {
+        margin-bottom: 12px;
+    }
+
+    .radio-group,
+    .checkbox-group {
+        gap: 8px 16px;
+    }
+
+    .top-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .top-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn,
+    .form-actions a.btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .jobs-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .jobs-table {
+        font-size: 13px;
+        min-width: 320px;
+    }
+
+    .jobs-table th,
+    .jobs-table td {
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 380px) {
+    header h1 {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    main {
+        padding: 0 10px 20px;
+    }
+}
